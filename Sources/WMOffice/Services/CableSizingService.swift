@@ -7,14 +7,18 @@ struct CableData {
     let impedance: Double // milli-ohms per meter
 }
 
-enum InstallationMethod {
+enum InstallationMethod: String, CaseIterable, Identifiable {
     case air
     case ground
+    
+    var id: String { rawValue }
 }
 
-enum PhaseType {
+enum PhaseType: String, CaseIterable, Identifiable {
     case single
     case three
+    
+    var id: String { rawValue }
 }
 
 struct CalculationResult {

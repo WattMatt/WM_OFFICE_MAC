@@ -7,6 +7,7 @@ enum SyncError: Error {
 }
 
 actor SyncQueue {
+    static let shared = SyncQueue()
     
     // Logic Spec: Retry Policy
     private let maxRetries = 3
